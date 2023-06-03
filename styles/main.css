@@ -1,0 +1,126 @@
+body {
+  background-color: var(--body-background);
+  display: grid;
+  place-items: center;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 10px;
+  max-width: 600px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.product-card__image {
+  max-width: 300px;
+  height: 100%;
+}
+
+.product-card__details {
+  padding: 32px;
+}
+
+.product-card__category {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--body-color);
+  margin-bottom: 20px;
+}
+
+.product-card__title {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--heading-color);
+  margin-bottom: 22px;
+}
+
+.product-card__description {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  color: var(--body-color);
+  margin-bottom: 31px;
+}
+
+.product-card__price--discounted {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--primary-color);
+}
+
+.product-card__price--real {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  text-decoration-line: line-through;
+  color: var(--body-color);
+  margin-left: 19px;
+}
+
+.product-card__button--add-to-cart {
+  background: var(--primary-color);
+  border-radius: 8px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  margin-top: 30px;
+  border: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 11.61px;
+  padding-block: 16px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.product-card__button--add-to-cart:hover {
+  background-color: var(--primary-hover);
+}
+
+@media only screen and (max-width: 768px) {
+  .product-card {
+    max-width: 343px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-card__image {
+    max-width: 100%;
+  }
+  .product-card__details {
+    padding: 24px;
+  }
+
+  .product-category {
+    margin-bottom: 12px;
+  }
+
+  .product-card__title {
+    margin-bottom: 16px;
+  }
+
+  .product-card__description {
+    margin-bottom: 24px;
+  }
+
+  .product-card__button--add-to-cart {
+    margin-top: 20px;
+  }
+}
